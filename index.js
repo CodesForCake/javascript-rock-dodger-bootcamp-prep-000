@@ -54,7 +54,7 @@ function createRock(x) {
     
     if (top > 360) {
       if (checkCollision(rock)){
-        return endGame();
+        endGame();
       } else {
         GAME.removeChild(rock);
       }
