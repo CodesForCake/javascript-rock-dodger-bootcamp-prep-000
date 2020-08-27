@@ -52,7 +52,9 @@ function createRock(x) {
     // implement me!
     if (top < 400){
       rock.style.top = `${top+=2}px` 
-      window.requestAnimationFrame(moveRock)
+      if (top<400){
+        window.requestAnimationFrame(moveRock)
+      }
     } else {
       if (checkCollision(rock)){
         endGame();
