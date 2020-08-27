@@ -62,6 +62,7 @@ function createRock(x) {
   }
   
   if (top < 400){
+    console.log("top<400")
      window.requestAnimationFrame(moveRock)
   }
   // We should kick off the animation of the rock around here.
