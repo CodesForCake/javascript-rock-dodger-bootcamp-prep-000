@@ -30,6 +30,8 @@ function checkCollision(rock) {
     //implement me
     if ((rockLeftEdge<dodgerLeftEdge && rockRightEdge>dodgerLeftEdge)||(rockLeftEdge>=dodgerLeftEdge && rockRightEdge<=dodgerRightEdge)||(rockLeftEdge<dodgerRightEdge && rockRightEdge>dodgerRightEdge)) {
       return true;
+    } else {
+      return false;
     }
   } else {
     return false;
