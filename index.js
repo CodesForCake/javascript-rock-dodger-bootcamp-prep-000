@@ -50,9 +50,10 @@ function createRock(x) {
   //move rock 2px at time
   function moveRock() {
     // implement me!
-    rock.style.top = `${top+=2}px` 
-    
-    if (top > 360) {
+    if (top < 400){
+      rock.style.top = `${top+=2}px` 
+      window.requestAnimationFrame(moveRock)
+    } else {
       if (checkCollision(rock)){
         endGame();
       } else {
@@ -60,11 +61,8 @@ function createRock(x) {
       }
     }
   }
-  
-  if (top < 400){
-    console.log("top<400")
-     window.requestAnimationFrame(moveRock)
-  }
+
+  window.requestAnimationFrame(moveRock)
   // We should kick off the animation of the rock around here.
 
   // Add the rock to ROCKS so that we can remove all rocks
