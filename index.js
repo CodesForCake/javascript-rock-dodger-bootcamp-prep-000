@@ -50,17 +50,15 @@ function createRock(x) {
   //move rock 2px at time
   function moveRock() {
     // implement me!
-    if (top < 400){
-      rock.style.top = `${top+=2}px` 
-      if (top<400){
-        window.requestAnimationFrame(moveRock)
-      }
-    } else if{
+    if (top > 360) {
       if (checkCollision(rock)){
         endGame();
       } else {
         GAME.removeChild(rock);
       }
+    } else {
+      rock.style.top = `${top+=2}px`
+      window.requestAnimationFrame(moveRock);
     }
   }
   if (top < 400) {
