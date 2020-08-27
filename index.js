@@ -98,7 +98,7 @@ function moveDodger(e) {
     window.requestAnimationFrame(moveDodgerLeft);
     e.preventDefault();
     e.stopPropagation();
-    return;
+    return moveDodgerLeft();
   } else if (e.which === RIGHT_ARROW) {
     window.requestAnimationFrame(moveDodgerRight);
     e.preventDefault();
