@@ -117,7 +117,7 @@ function moveDodgerRight() {
   // implement me!
   var left = positionToInteger(DODGER.style.left);
   
-  function move() {
+  if (left < 360) {
     dodger.style.left = `${left + 4}px`;
   }
   
