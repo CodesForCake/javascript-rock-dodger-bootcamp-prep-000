@@ -98,11 +98,14 @@ function moveDodger(e) {
     window.requestAnimationFrame(moveDodgerLeft);
     e.preventDefault();
     e.stopPropagation();
-    return moveDodgerLeft();
+    var mdl = moveDodgerLeft();
+    console.log(mdl)
+    return mdl;
   } else if (e.which === RIGHT_ARROW) {
     window.requestAnimationFrame(moveDodgerRight);
     e.preventDefault();
     e.stopPropagation();
+    
     return moveDodgerRight();
   }
 }
