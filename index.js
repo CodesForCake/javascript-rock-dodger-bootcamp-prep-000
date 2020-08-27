@@ -98,14 +98,11 @@ function moveDodger(e) {
     window.requestAnimationFrame(moveDodgerLeft);
     e.preventDefault();
     e.stopPropagation();
-    var mdl = moveDodgerLeft();
-    console.log(mdl)
-    return mdl;
+    return moveDodgerLeft();
   } else if (e.which === RIGHT_ARROW) {
     window.requestAnimationFrame(moveDodgerRight);
     e.preventDefault();
     e.stopPropagation();
-    
     return moveDodgerRight();
   }
 }
@@ -147,3 +144,5 @@ function start() {
     createRock(Math.floor(Math.random() *  (GAME_WIDTH - 20)))
   }, 1000)
 }
+
+start()
