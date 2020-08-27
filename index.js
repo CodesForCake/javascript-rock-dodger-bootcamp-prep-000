@@ -45,7 +45,7 @@ function createRock(x) {
   rock.style.top = top
 
   //Append rock to game + move it downwards
-  var newRock = GAME.appendChild(rock);
+  GAME.appendChild(rock);
 
   //move rock 2px at time
   function moveRock() {
