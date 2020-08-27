@@ -52,12 +52,12 @@ function createRock(x) {
     // implement me!
     rock.style.top = `${top+=2}px`
     
+    if (checkCollision(rock)){
+      return endGame();
+    }
+    
     if (top > 360) {
-      if (checkCollision(rock)){
-        return endGame();
-      } else {
-        GAME.removeChild(rock);
-      }
+      GAME.removeChild(rock);
     } else {
       window.requestAnimationFrame(moveRock);
     }
