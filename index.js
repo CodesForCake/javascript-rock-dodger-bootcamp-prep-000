@@ -103,7 +103,7 @@ function moveDodger(e) {
     window.requestAnimationFrame(moveDodgerRight);
     e.preventDefault();
     e.stopPropagation();
-    return;
+    return moveDodgerRight();
   }
 }
 
