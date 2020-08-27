@@ -93,15 +93,17 @@ function endGame() {
 
 function moveDodger(e) {
   // implement me!
-  e.preventDefault();
-  e.stopPropagation();
   
   if (e.which === LEFT_ARROW) {
     window.requestAnimationFrame(moveDodgerLeft);
+    e.preventDefault();
+    e.stopPropagation();
     return moveDodgerLeft();
   } else if (e.which === RIGHT_ARROW) {
     window.requestAnimationFrame(moveDodgerRight);
-    return moveDodgerRight();
+    e.preventDefault();
+    e.stopPropagation();
+    return;
   }
 }
 
